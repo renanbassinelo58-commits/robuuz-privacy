@@ -1,33 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Política de Privacidade - Robuuz</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Política de Privacidade do app Robuuz — 100% offline, zero coleta de dados, compatível com LGPD, GDPR e COPPA." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0A0A0F" />
+  <title>Política de Privacidade — Robuuz</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; }
-    h1 { color: #1a1a2e; }
-    h2 { color: #444; margin-top: 30px; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0A0A0F;--bg-card:#131319;--bg-card-hover:#1a1a22;--border:#23232d;
+      --led:#00FF94;--led-dim:rgba(0,255,148,.14);--text-primary:#F5F5F7;
+      --text-secondary:#B8B8C0;--text-muted:#7A7A85;--radius:14px;
+    }
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{background:var(--bg);color:var(--text-primary);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter','Roboto','Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.65;min-height:100vh;-webkit-font-smoothing:antialiased;background-image:radial-gradient(circle at 10% -10%,rgba(0,255,148,.06),transparent 40%),radial-gradient(circle at 90% 110%,rgba(0,255,148,.04),transparent 40%)}
+    a{color:var(--led);text-decoration:none}a:hover{text-decoration:underline}
+    .led-top{height:3px;background:linear-gradient(90deg,transparent,var(--led),transparent);box-shadow:0 0 10px var(--led)}
+    header.site{padding:32px 24px 16px;max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-logo{width:44px;height:44px;border-radius:12px;background:var(--led-dim);border:1.5px solid var(--led);display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px rgba(0,255,148,.3)}
+    .brand-logo svg{width:22px;height:22px}
+    .brand-name{font-size:19px;font-weight:800;letter-spacing:-.3px}
+    .brand-sub{font-size:11.5px;color:var(--text-muted);margin-top:2px;letter-spacing:.3px}
+    .header-links{display:flex;gap:18px;font-size:13px}
+    .header-links a{color:var(--text-secondary);font-weight:600}
+    .header-links a.active{color:var(--led)}
+    main{max-width:860px;margin:0 auto;padding:24px}
+    .hero{text-align:center;padding:32px 20px;margin-bottom:24px}
+    .hero-badge{width:72px;height:72px;border-radius:20px;background:var(--led-dim);border:1.5px solid var(--led);display:inline-flex;align-items:center;justify-content:center;box-shadow:0 0 35px rgba(0,255,148,.3);margin-bottom:16px}
+    .hero-badge svg{width:34px;height:34px;color:var(--led)}
+    h1{font-size:clamp(28px,5vw,40px);font-weight:800;letter-spacing:-.6px;margin-bottom:10px}
+    .hero-sub{font-size:15.5px;color:var(--text-secondary);max-width:540px;margin:0 auto;line-height:1.55}
+    .callout{background:linear-gradient(135deg,var(--led-dim) 0%,transparent 100%);border:1px solid var(--led);border-radius:var(--radius);padding:18px 20px;margin-bottom:24px;display:flex;gap:14px;align-items:flex-start}
+    .callout-icon{flex-shrink:0;color:var(--led);margin-top:2px}
+    .callout-title{font-size:14.5px;font-weight:700;color:var(--text-primary);margin-bottom:4px}
+    .callout-text{font-size:13.5px;color:var(--text-secondary)}
+    section.block{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:22px 24px;margin-bottom:14px;transition:border-color .2s,background .2s}
+    section.block:hover{border-color:rgba(0,255,148,.3);background:var(--bg-card-hover)}
+    .block-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+    .block-icon{width:36px;height:36px;border-radius:10px;background:var(--led-dim);border:1px solid var(--led);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .block-icon svg{width:18px;height:18px;color:var(--led)}
+    h2{font-size:17px;font-weight:700;letter-spacing:-.2px;color:var(--text-primary)}
+    section.block p{color:var(--text-secondary);font-size:14.5px;margin-bottom:10px}
+    section.block p:last-child{margin-bottom:0}
+    section.block ul{list-style:none;padding-left:0;margin:10px 0}
+    section.block ul li{color:var(--text-secondary);font-size:14px;padding:6px 0 6px 24px;position:relative}
+    section.block ul li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:8px;border-radius:50%;background:var(--led);box-shadow:0 0 6px var(--led)}
+    strong{color:var(--text-primary);font-weight:700}
+    .badge-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:var(--led-dim);border:1px solid var(--led);border-radius:999px;padding:6px 12px;font-size:11.5px;font-weight:700;color:var(--led);letter-spacing:.4px}
+    .contact-card{background:linear-gradient(135deg,rgba(0,255,148,.05) 0%,transparent 100%);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:24px;text-align:center}
+    .contact-card h3{font-size:16px;font-weight:700;margin-bottom:6px}
+    .contact-card .email{display:inline-block;margin-top:10px;font-size:15px;font-weight:700;color:var(--led);padding:10px 20px;border:1px solid var(--led);border-radius:10px;background:var(--led-dim);transition:background .2s}
+    .contact-card .email:hover{background:rgba(0,255,148,.22);text-decoration:none}
+    footer.site{text-align:center;padding:32px 24px 40px;color:var(--text-muted);font-size:12px;max-width:860px;margin:0 auto}
+    footer.site .links{display:flex;gap:14px;justify-content:center;margin-bottom:10px;flex-wrap:wrap}
+    footer.site .links a{color:var(--text-muted);font-weight:500}
+    footer.site .links a:hover{color:var(--led)}
+    footer.site .meta{margin-top:6px;font-size:11px;line-height:1.6}
+    @media(max-width:540px){main{padding:16px}header.site{padding:24px 16px 12px}section.block{padding:18px}.hero{padding:20px 8px}.contact-card{padding:20px 16px}}
   </style>
 </head>
 <body>
-  <h1>Política de Privacidade</h1>
-  <p><strong>Robuuz - Hábitos & Dopamina</strong></p>
-  <p>Última atualização: junho de 2026</p>
-
-  <h2>1. Coleta de Dados</h2>
-  <p>O Robuuz não coleta, armazena ou transmite nenhum dado pessoal para servidores externos. Todos os dados inseridos no app (hábitos, receitas, finanças) ficam armazenados exclusivamente no dispositivo do usuário.</p>
-
-  <h2>2. Dados de Pagamento</h2>
-  <p>As assinaturas Premium são processadas exclusivamente pelo Google Play. O Robuuz não tem acesso aos dados de pagamento do usuário.</p>
-
-  <h2>3. Uso Offline</h2>
-  <p>O app funciona 100% offline. Nenhuma informação pessoal é enviada para servidores.</p>
-
-  <h2>4. Permissões</h2>
-  <p>O app solicita apenas as permissões necessárias para o funcionamento das assinaturas via Google Play Billing.</p>
-
-  <h2>5. Contato</h2>
-  <p>Em caso de dúvidas, entre em contato: <strong>renanbassinelo58@gmail.com</strong></p>
+  <div class="led-top"></div>
+  <header class="site">
+    <div class="brand">
+      <div class="brand-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#00FF94" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">Robuuz</div>
+        <div class="brand-sub">Hábitos · Finanças · Produtividade</div>
+      </div>
+    </div>
+    <nav class="header-links">
+      <a href="index.html" class="active">Privacidade</a>
+      <a href="terms.html">Termos</a>
+    </nav>
+  </header>
+  <main>
+    <div class="hero">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+      </div>
+      <h1>Política de Privacidade</h1>
+      <p class="hero-sub">O Robuuz foi desenvolvido com foco total na privacidade do usuário. 100% dos seus dados ficam no seu dispositivo.</p>
+      <div class="badge-row" style="justify-content:center">
+        <span class="badge">✓ LGPD</span>
+        <span class="badge">✓ GDPR</span>
+        <span class="badge">✓ COPPA</span>
+        <span class="badge">✓ 100% Offline</span>
+      </div>
+    </div>
+    <div class="callout">
+      <div class="callout-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+      </div>
+      <div>
+        <div class="callout-title">Resumo em uma frase</div>
+        <div class="callout-text">Não coletamos, não compartilhamos e não vendemos nenhum dado. Seus hábitos, notas, finanças e rotina ficam gravados somente no seu celular.</div>
+      </div>
+    </div>
+    <section class="block">
+      <div class="block-head"><div class="block-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></div><h2>📦 Armazenamento de dados</h2></div>
+      <p>Todos os dados inseridos no Robuuz — incluindo <strong>hábitos, notas, finanças, banco de horas, receitas favoritas e preferências</strong> — são armazenados <strong>EXCLUSIVAMENTE no seu dispositivo</strong>, utilizando o armazenamento local seguro do sistema operacional.</p>
+      <p>Nenhum dado pessoal trafega pela internet. O app funciona integralmente offline, sem necessidade de cadastro, login ou conexão com servidores externos.</p>
+    </section>
+    <section class="block">
+      <div class="block-head"><div class="block-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg></div><h2>🚫 O que NÃO coletamos</h2></div>
+      <ul>
+        <li>Nenhuma informação pessoal identificável (nome, e-mail, telefone, endereço, CPF)</li>
+        <li>Dados de uso ou comportamento dentro do app</li>
+        <li>Localização geográfica</li>
+        <li>Lista de contatos ou agenda do dispositivo</li>
+        <li>Microfone, câmera ou galeria de fotos</li>
+        <li>Cookies de rastreamento</li>
+        <li>Identificadores publicitários (AAID / IDFA)</li>
+      </ul>
+    </section>
+    <section class="block">
+      <div class="block-head"><div class="block-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h2>🤝 Compartilhamento com terceiros</h2></div>
+      <p>Não compartilhamos dados com terceiros porque <strong>simplesmente não temos acesso a eles</strong>. O Robuuz não possui sistema de cadastro, backend de autenticação ou rastreamento de usuários.</p>
+      <p>Não usamos ferramentas de analytics (Google Analytics, Firebase, Mixpanel) nem SDKs de anúncios.</p>
+    </section>
+    <section class="block">
+      <div class="block-head"><div class="block-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div><h2>💳 Pagamentos (Plano Premium)</h2></div>
+      <p>Quando você assina um plano Premium, o pagamento é processado <strong>100% pelo Google Play</strong>. O Robuuz <strong>NÃO recebe</strong> seus dados de cartão ou informações cadastrais.</p>
+      <p>Recebemos apenas um identificador anônimo de assinatura (purchase token) para validar seu acesso aos recursos pagos.</p>
+    </section>
+    <section class="block">
+      <div class="block-head"><div class="block-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h2>🔒 Controle total dos seus dados</h2></div>
+      <ul>
+        <li>Toque em <strong>"Limpar dados"</strong> dentro do app a qualquer momento</li>
+        <li><strong>Desinstalar o Robuuz</strong> remove todas as informações permanentemente</li>
+        <li>Seus dados nunca saem do seu dispositivo</li>
+      </ul>
+    </section>
+    <section class="block">
+      <div class="block-head"><div class="block-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h2>📜 Alterações desta política</h2></div>
+      <p>Caso esta política seja atualizada, a nova versão será publicada nesta mesma página. Manteremos sempre a filosofia <strong>"100% no dispositivo, 0 servidores"</strong>.</p>
+    </section>
+    <div class="contact-card">
+      <h3>Dúvidas? Fale com a gente</h3>
+      <p style="color:var(--text-secondary);font-size:14px">Respondemos em até 48h úteis.</p>
+      <a href="mailto:atendimento@robuuz.com" class="email">✉️ atendimento@robuuz.com</a>
+    </div>
+  </main>
+  <footer class="site">
+    <div class="links">
+      <a href="index.html">Privacidade</a>
+      <a href="terms.html">Termos</a>
+      <a href="mailto:atendimento@robuuz.com">Contato</a>
+    </div>
+    <div class="meta">
+      Última atualização: junho de 2026 · www.robuuz.com<br/>
+      © 2026 Robuuz. Todos os direitos reservados.
+    </div>
+  </footer>
+  <div class="led-top" style="margin-top:10px"></div>
 </body>
 </html>
