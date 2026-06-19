@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Termos de Uso do app Robuuz — assinaturas, cancelamento, reembolso, privacidade e condições gerais." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0A0A0F" />
+  <title>Termos de Uso — Robuuz</title>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0A0A0F;--bg-card:#131319;--bg-card-hover:#1a1a22;--border:#23232d;--led:#00FF94;--led-dim:rgba(0,255,148,.14);--text-primary:#F5F5F7;--text-secondary:#B8B8C0;--text-muted:#7A7A85;--gold:#f4c83a;--radius:14px;}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{background:var(--bg);color:var(--text-primary);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter','Roboto','Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.65;min-height:100vh;-webkit-font-smoothing:antialiased;background-image:radial-gradient(circle at 10% -10%,rgba(0,255,148,.06),transparent 40%),radial-gradient(circle at 90% 110%,rgba(0,255,148,.04),transparent 40%)}
+    a{color:var(--led);text-decoration:none}a:hover{text-decoration:underline}
+    .led-top{height:3px;background:linear-gradient(90deg,transparent,var(--led),transparent);box-shadow:0 0 10px var(--led)}
+    header.site{padding:32px 24px 16px;max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-logo{width:44px;height:44px;border-radius:12px;background:var(--led-dim);border:1.5px solid var(--led);display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px rgba(0,255,148,.3)}
+    .brand-logo svg{width:22px;height:22px}
+    .brand-name{font-size:19px;font-weight:800;letter-spacing:-.3px}
+    .brand-sub{font-size:11.5px;color:var(--text-muted);margin-top:2px;letter-spacing:.3px}
+    .header-links{display:flex;gap:18px;font-size:13px}
+    .header-links a{color:var(--text-secondary);font-weight:600}
+    .header-links a.active{color:var(--led)}
+    main{max-width:860px;margin:0 auto;padding:24px}
+    .hero{text-align:center;padding:32px 20px;margin-bottom:24px}
+    .hero-badge{width:72px;height:72px;border-radius:20px;background:var(--led-dim);border:1.5px solid var(--led);display:inline-flex;align-items:center;justify-content:center;box-shadow:0 0 35px rgba(0,255,148,.3);margin-bottom:16px}
+    .hero-badge svg{width:34px;height:34px;color:var(--led)}
+    h1{font-size:clamp(28px,5vw,40px);font-weight:800;letter-spacing:-.6px;margin-bottom:10px}
+    .hero-sub{font-size:15.5px;color:var(--text-secondary);max-width:540px;margin:0 auto;line-height:1.55}
+    .plans{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin:8px 0 28px}
+    .plan{background:var(--bg-card);border:1.5px solid var(--border);border-radius:16px;padding:20px;position:relative;transition:border-color .2s,transform .2s}
+    .plan:hover{border-color:var(--led);transform:translateY(-2px)}
+    .plan.popular{border-color:var(--led);box-shadow:0 0 25px rgba(0,255,148,.15)}
+    .plan.best{border-color:var(--gold);box-shadow:0 0 25px rgba(244,200,58,.15)}
+    .plan-badge{position:absolute;top:-10px;right:14px;font-size:9.5px;font-weight:900;letter-spacing:.6px;padding:4px 10px;border-radius:999px;color:#0A0A0F}
+    .plan.popular .plan-badge{background:var(--led)}
+    .plan.best .plan-badge{background:var(--gold)}
+    .plan-name{font-size:15px;font-weight:700;margin-bottom:4px}
+    .plan-desc{font-size:11.5px;color:var(--text-muted);margin-bottom:14px}
+    .plan-price{font-size:28px;font-weight:800;letter-spacing:-.6px;margin-bottom:2px}
+    .plan-period{font-size:11.5px;color:var(--text-muted);margin-bottom:12px}
+    .plan-equiv{font-size:12px;color:var(--text-secondary);margin-bottom:12px}
+    .plan-equiv strong{color:var(--led)}
+    .plan hr{border:none;border-top:1px solid var(--border);margin:12px 0}
+    .plan ul{list-style:none;padding:0}
+    .plan ul li{font-size:12.5px;color:var(--text-secondary);padding:4px 0 4px 20px;position:relative}
+    .plan ul li::before{content:"✓";position:absolute;left:0;top:4px;color:var(--led);font-weight:800;font-size:13px}
+    .callout{background:linear-gradient(135deg,var(--led-dim) 0%,transparent 100%);border:1px solid var(--led);border-radius:var(--radius);padding:18px 20px;margin-bottom:24px;display:flex;gap:14px;align-items:flex-start}
+    .callout-icon{flex-shrink:0;color:var(--led);margin-top:2px}
+    .callout-title{font-size:14.5px;font-weight:700;color:var(--text-primary);margin-bottom:4px}
+    .callout-text{font-size:13.5px;color:var(--text-secondary)}
+    section.block{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:22px 24px;margin-bottom:14px;transition:border-color .2s,background .2s}
+    section.block:hover{border-color:rgba(0,255,148,.3);background:var(--bg-card-hover)}
+    .block-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+    .block-icon{width:36px;height:36px;border-radius:10px;background:var(--led-dim);border:1px solid var(--led);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12.5px;font-weight:900;color:var(--led)}
+    h2{font-size:17px;font-weight:700;letter-spacing:-.2px;color:var(--text-primary)}
+    section.block p{color:var(--text-secondary);font-size:14.5px;margin-bottom:10px}
+    section.block p:last-child{margin-bottom:0}
+    section.block ul{list-style:none;padding-left:0;margin:10px 0}
+    section.block ul li{color:var(--text-secondary);font-size:14px;padding:6px 0 6px 24px;position:relative}
+    section.block ul li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:8px;border-radius:50%;background:var(--led);box-shadow:0 0 6px var(--led)}
+    strong{color:var(--text-primary);font-weight:700}
+    .contact-card{background:linear-gradient(135deg,rgba(0,255,148,.05) 0%,transparent 100%);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:24px;text-align:center}
+    .contact-card h3{font-size:16px;font-weight:700;margin-bottom:6px}
+    .contact-card .email{display:inline-block;margin-top:10px;font-size:15px;font-weight:700;color:var(--led);padding:10px 20px;border:1px solid var(--led);border-radius:10px;background:var(--led-dim);transition:background .2s}
+    .contact-card .email:hover{background:rgba(0,255,148,.22);text-decoration:none}
+    footer.site{text-align:center;padding:32px 24px 40px;color:var(--text-muted);font-size:12px;max-width:860px;margin:0 auto}
+    footer.site .links{display:flex;gap:14px;justify-content:center;margin-bottom:10px;flex-wrap:wrap}
+    footer.site .links a{color:var(--text-muted);font-weight:500}
+    footer.site .links a:hover{color:var(--led)}
+    footer.site .meta{margin-top:6px;font-size:11px;line-height:1.6}
+    @media(max-width:540px){main{padding:16px}header.site{padding:24px 16px 12px}section.block{padding:18px}.hero{padding:20px 8px}.contact-card{padding:20px 16px}.plan{padding:16px}}
+  </style>
+</head>
+<body>
+  <div class="led-top"></div>
+  <header class="site">
+    <div class="brand">
+      <div class="brand-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#00FF94" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">Robuuz</div>
+        <div class="brand-sub">Hábitos · Finanças · Produtividade</div>
+      </div>
+    </div>
+    <nav class="header-links">
+      <a href="index.html">Privacidade</a>
+      <a href="terms.html" class="active">Termos</a>
+    </nav>
+  </header>
+  <main>
+    <div class="hero">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      </div>
+      <h1>Termos de Uso</h1>
+      <p class="hero-sub">Ao usar o Robuuz, você concorda com os termos abaixo. Leia as regras de assinatura, cancelamento e reembolso.</p>
+    </div>
+    <div class="callout">
+      <div class="callout-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+      </div>
+      <div>
+        <div class="callout-title">3 dias grátis em qualquer plano</div>
+        <div class="callout-text">Todos os 3 planos começam com <strong>3 dias de teste gratuito</strong>. Se cancelar durante o período de teste, nada é cobrado.</div>
+      </div>
+    </div>
+    <section class="block">
+      <div class="block-head"><div class="block-icon">1</div><h2>Aceitação dos Termos</h2></div>
+      <p>Ao instalar ou utilizar o Robuuz, você confirma que leu, entendeu e concordou integralmente com estes Termos de Uso.</p>
+    </section>
+    <section class="block">
+      <div class="block-head"><div class="block-icon">2</div><h2>Sobre o Serviço</h2></div>
+      <p>O Robuuz é um aplicativo de rastreamento de hábitos, finanças, banco de horas, notas e receitas saudáveis. Todos os dados são armazenados localmente no dispositivo (<strong>offline-first</strong>), sem cadastro ou login.</p>
+    </section>
+    <section class="block">
+      <div class="block-head"><div class="block-icon">3</div><h2>Plano Premium — Assinaturas</h2></div>
+      <p>O Robuuz oferece três planos pagos. Todos começam com <strong>3 dias de teste gratuito</strong>:</p>
+      <div class="plans">
+        <div class="plan">
+          <div class="plan-name">💎 Mensal</div>
+          <div class="plan-desc">Renovação automática mensal</div>
+          <div class="plan-price">R$ 14,99</div>
+          <div class="plan-period">por mês</div>
+          <hr>
+          <ul><li>3 dias grátis</li><li>Renovação automática</li><li>Cancele quando quiser</li></ul>
+        </div>
+        <div class="plan popular">
+          <div class="plan-badge">🔥 MAIS POPULAR</div>
+          <div class="plan-name">🔥 Trimestral</div>
+          <div class="plan-desc">Economize 22% vs. mensal</div>
+          <div class="plan-price">R$ 34,99</div>
+          <div class="plan-period">a cada 3 meses</div>
+          <div class="plan-equiv">Equivale a <strong>R$ 11,66/mês</strong></div>
+          <hr>
+          <ul><li>3 dias grátis</li><li>Economia de 22%</li><li>Cancele quando quiser</li></ul>
+        </div>
+        <div class="plan best">
+          <div class="plan-badge">⭐ MELHOR VALOR</div>
+          <div class="plan-name">⭐ Anual</div>
+          <div class="plan-desc">Economize 50% vs. mensal</div>
+          <div class="plan-price">R$ 89,90</div>
+          <div class="plan-period">por ano</div>
+          <div class="plan-equiv">Equivale a <strong>R$ 7,49/mês</strong></div>
+          <hr>
+          <ul><li>3 dias grátis</li><li>Economia de 50%</li><li>Cancele quando quiser</li></ul>
+        </div>
+      </div>
+    </section>
+    <section class="block">
+      <div class="block-head"><div class="block-icon">4</div><h2>Pagamento e Cobrança</h2></div>
+      <p>O pagamento é processado pelo <strong>Google Play (Android)</strong>. A primeira cobrança ocorre somente <strong>ao fim dos 3 dias de teste gratuito</strong>.</p>
+    </section>
+    <section class="block">
+      <div class="block-head"><div class="block-icon">5</div><h2>Cancelamento</h2></div>
+      <p>Cancele a qualquer momento diretamente no Google Play → Menu → Pagamentos e assinaturas → Assinaturas. Após o cancelamento, você mantém o acesso até o fim do período pago.</p>
+    </section>
+    <section class="block">
+      <div class="block-head"><div class="block-icon">6</div><h2>Reembolso</h2></div>
+      <p>Reembolsos seguem a política oficial do Google Play (solicitação em até 48h). Durante o período de teste gratuito, o cancelamento não gera nenhuma cobrança.</p>
+    </section>
+    <section class="block">
+      <div class="block-head"><div class="block-icon">7</div><h2>Renovação Automática</h2></div>
+      <p>As assinaturas renovam automaticamente ao final de cada período. Para evitar renovação, cancele <strong>até 24 horas antes</strong> do fim do ciclo atual.</p>
+    </section>
+    <section class="block">
+      <div class="block-head"><div class="block-icon">8</div><h2>Privacidade</h2></div>
+      <p>Consulte nossa <a href="index.html">Política de Privacidade</a>. Em resumo: <strong>100% dos seus dados ficam no seu dispositivo</strong>. Não coletamos nenhuma informação pessoal.</p>
+    </section>
+    <section class="block">
+      <div class="block-head"><div class="block-icon">9</div><h2>Limitação de Responsabilidade</h2></div>
+      <p>O Robuuz é uma ferramenta de auxílio pessoal. As informações têm <strong>caráter informativo</strong> e não substituem aconselhamento médico, nutricional ou financeiro profissional.</p>
+    </section>
+    <section class="block">
+      <div class="block-head"><div class="block-icon">10</div><h2>Alterações nestes Termos</h2></div>
+      <p>Podemos atualizar estes Termos a qualquer momento. A nova versão será publicada nesta página com a data de atualização.</p>
+    </section>
+    <div class="contact-card">
+      <h3>Dúvidas sobre sua assinatura?</h3>
+      <p style="color:var(--text-secondary);font-size:14px">Respondemos em até 48h úteis.</p>
+      <a href="mailto:atendimento@robuuz.com" class="email">✉️ atendimento@robuuz.com</a>
+    </div>
+  </main>
+  <footer class="site">
+    <div class="links">
+      <a href="index.html">Privacidade</a>
+      <a href="terms.html">Termos</a>
+      <a href="mailto:atendimento@robuuz.com">Contato</a>
+    </div>
+    <div class="meta">
+      Última atualização: junho de 2026 · www.robuuz.com<br/>
+      © 2026 Robuuz. Todos os direitos reservados.
+    </div>
+  </footer>
+  <div class="led-top" style="margin-top:10px"></div>
+</body>
+</html>
